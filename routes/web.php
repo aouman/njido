@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('users.admin.home');
+    return view('users.admin.appartements.create');
 });
 
 Auth::routes();
