@@ -31,10 +31,10 @@
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="fontawesome.html"
                         aria-expanded="false">
                         <i class="fas fa-coins"></i>
-                        <span class="hide-menu">Mes payements</span>
+                        <span class="hide-menu">Les payements</span>
                     </a>
                 </li>
-                
+
                 <li class="text-center p-20 upgrade-btn">
                     <a href="https://www.wrappixel.com/templates/ampleadmin/"
                         class="btn d-grid btn-danger text-white" target="_blank">

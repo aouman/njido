@@ -13,6 +13,13 @@
                         <span class="hide-menu">Mes informations</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
+                        aria-expanded="false">
+                        <i class="fas fa-coins"></i>
+                        <span class="hide-menu">Mes paiements</span>
+                    </a>
+                </li>
 
                 <li class="text-center p-20 upgrade-btn">
                     <a href="https://www.wrappixel.com/templates/ampleadmin/"
