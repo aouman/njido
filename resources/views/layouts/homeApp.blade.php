@@ -48,15 +48,15 @@
                     <!-- ============================================================== -->
                     <a class="navbar-brand" href="dashboard.html">
                         <!-- Logo icon -->
-                        <b class="logo-icon">
-                            <!-- Dark Logo icon -->
+                        <!--b class="logo-icon">
+                            <!- Dark Logo icon ->
                             <img src="{{asset('backend/plugins/images/logo-icon.png')}}" alt="homepage" />
-                        </b>
+                        </b-->
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <img src="{{asset('backend/plugins/images/logo-text.png')}}" alt="homepage" />
+                            <img src="{{asset('backend/plugins/images/logo.png')}}" width="200" alt="homepage" />
                         </span>
                     </a>
                     <!-- ============================================================== -->
@@ -78,17 +78,6 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav ms-auto d-flex align-items-center">
 
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <li class=" in">
-                            <form role="search" class="app-search d-none d-md-block me-3">
-                                <input type="text" placeholder="Search..." class="form-control mt-0">
-                                <a href="" class="active">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </form>
-                        </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
