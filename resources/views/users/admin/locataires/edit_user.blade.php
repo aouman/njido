@@ -42,7 +42,7 @@
             <div class="col-sm-6">
               <div class="card shadow rounded rounded-3">
                   <div class="card-body">
-                      <form class="form-horizontal form-material" action="{{URL::to('admin/update-user/'.$edit->id)}}" method="post">
+                      <form class="form-horizontal form-material" action="{{URL::to('update-user/'.$edit->id)}}" method="post">
                         @csrf
                           <div class="form-group mb-4">
                               <label class="col-md-12 p-0">Nom et Prénoms</label>

@@ -32,7 +32,7 @@ class UserController extends Controller
     $data['name']= $request->name;
     $data['email'] = $request->email;
     $data['phone'] = $request->phone;
-    $data['date_location'] = date('Y-m-d H:i:s');
+    $data['date_location'] = date('Y-m-d');
     $data['role'] = $request->role;
     $data['password'] = Hash::make($request->password);
     $data['created_at'] = date('Y-m-d H:i:s');
@@ -69,7 +69,7 @@ class UserController extends Controller
     $data['name']= $request->name;
     $data['email'] = $request->email;
     $data['phone'] = $request->phone;
-    $data['date_location'] = date('d-m-Y');
+    $data['date_location'] = date('Y-m-d');
     $data['role'] = $request->role;
     $data['password'] = Hash::make($request->password);
     $data['created_at'] = date('Y-m-d H:i:s');

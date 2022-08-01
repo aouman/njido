@@ -14,17 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('auth/login');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //user management
-route::prefix('admin')->middleware('auth','isAdmin')->group(function(){
+route::middleware('auth','isAdmin')->group(function(){
   Route::get('/meslocataires', [App\Http\Controllers\users\UserController::class, 'AllUser'])->name('alluser');
   Route::get('/ajouter-locataire', [App\Http\Controllers\users\UserController::class, 'AddUser'])->name('adduser');
   Route::post('insert-user', [App\Http\Controllers\users\UserController::class, 'InsertUser'])->name('insertuser');

@@ -28,7 +28,7 @@
                     <ol class="breadcrumb ms-auto">
                         <li></li>
                     </ol>
-                    <a href="admin/ajouter-locataire"
+                    <a href="/ajouter-locataire"
                         class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">
                         Ajouter un locataire
                       </a>
@@ -76,10 +76,10 @@
                                     <td>{{$row->role}}</td>
                                     <td>{{$row->date_location}}</td>
                                     <td>
-                                      <a href="{{URL::to('admin/modifier-locataire/'.$row->id)}}" class="font-18 bg-info text-white p-2 rounded-3 shadow-sm m-r-30">
+                                      <a href="{{URL::to('/modifier-locataire/'.$row->id)}}" class="font-18 bg-info text-white p-2 rounded-3 shadow-sm m-r-30">
                                         <i class="fas fa-edit"></i>
                                       </a>
-                                      <a href="{{URL::to('admin/delete-user/'.$row->id)}}" class="font-18 bg-danger text-white p-2 rounded-3 shadow-sm">
+                                      <a href="{{URL::to('/delete-user/'.$row->id)}}" class="font-18 bg-danger text-white p-2 rounded-3 shadow-sm">
                                         <i class="fas fa-trash"></i>
                                       </a>
                                     </td>

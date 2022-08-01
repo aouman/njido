@@ -22,7 +22,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin/meslocataires"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/meslocataires"
                         aria-expanded="false">
                         <i class="fas fa-users"></i>
                         <span class="hide-menu">Mes locataires</span>
@@ -60,7 +60,7 @@
                         class="btn d-grid btn-danger text-white" target="_blank">
                         Se deconnecter
                     </a>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
                       @csrf
                   </form>
                 </li>
