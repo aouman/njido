@@ -4,7 +4,7 @@
 <!-- ============================================================== -->
 <!-- Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
-@include('includes.adminSidebar')
+@include('includes.homeSidebar')
 <!-- ============================================================== -->
 <!-- End Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
@@ -28,7 +28,7 @@
                     <ol class="breadcrumb ms-auto">
                         <li></li>
                     </ol>
-                    <a href="https://www.wrappixel.com/templates/ampleadmin/" target="_blank"
+                    <a href="admin/ajouter-locataire"
                         class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">
                         Ajouter un locataire
                       </a>
@@ -57,6 +57,8 @@
                                 <tr>
                                     <th class="border-top-0">#</th>
                                     <th class="border-top-0">Nom et prénoms</th>
+                                    <th class="border-top-0">email</th>
+                                    <th class="border-top-0">Role</th>
                                     <th class="border-top-0">N° de téléphone</th>
                                     <th class="border-top-0">Type d'appartement</th>
                                     <th class="border-top-0">Date de location</th>
@@ -64,22 +66,26 @@
                                 </tr>
                             </thead>
                             <tbody>
+                              @foreach($all as $key=>$row)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Arsene Kouassi</td>
-                                    <td>+225 05040402036</td>
-                                    <td>Studio</td>
-                                    <td>25/03/2022</td>
+                                    <td>{{$key+1}}</td>
+                                    <td>{{$row->name}}</td>
+                                    <td>{{$row->email}}</td>
+                                    <td>{{$row->role}}</td>
+                                    <td>{{$row->phone}}</td>
+                                    <td>{{$row->role}}</td>
+                                    <td>{{$row->date_location}}</td>
                                     <td>
-                                      <a href="#" class="font-18 bg-info text-white p-2 rounded-3 shadow-sm m-r-30">
+                                      <a href="{{URL::to('admin/modifier-locataire/'.$row->id)}}" class="font-18 bg-info text-white p-2 rounded-3 shadow-sm m-r-30">
                                         <i class="fas fa-edit"></i>
                                       </a>
-                                      <a href="#" class="font-18 bg-danger text-white p-2 rounded-3 shadow-sm">
+                                      <a href="{{URL::to('admin/delete-user/'.$row->id)}}" class="font-18 bg-danger text-white p-2 rounded-3 shadow-sm">
                                         <i class="fas fa-trash"></i>
                                       </a>
                                     </td>
 
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

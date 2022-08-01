@@ -21,7 +21,7 @@
                 <h4 class="page-title">Tableau de bord</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                
+
             </div>
         </div>
         <!-- /.col-lg-12 -->
@@ -46,7 +46,7 @@
             </div>
           </a>
 
-          <a class="col-lg-4 col-md-12" href="#">
+          <a class="col-lg-4 col-md-12" href="admin/meslocataires">
             <div class="shadow text-center font-bold text-uppercase" >
                 <div class="white-box analytics-info">
                     <h1><i class="fas fa-users"></i></h1>
