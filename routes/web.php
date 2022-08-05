@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\appartement\AppartController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +34,11 @@ route::middleware('auth','isAdmin')->group(function(){
   Route::get('/delete-user/{id}', [App\Http\Controllers\users\UserController::class, 'DeleteUser'])->name('deleteuser');
 
 //appartements management
+  Route::get('/mesappartements', [App\Http\Controllers\appartement\AppartController::class, 'AllAppart'])->name('allappart');
+  Route::get('/ajouter-locataire', [App\Http\Controllers\appartement\AppartController::class, 'AddAppart'])->name('addappart');
+  Route::post('insert-appart', [App\Http\Controllers\appartement\AppartController::class, 'InsertAppart'])->name('insertappart');
+  Route::get('/modifier-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'EditAppart'])->name('editappart');
+  Route::post('update-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'UpdateAppart'])->name('updateappart');
+  Route::get('/delete-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'DeleteAppart'])->name('deleteappart');
+
 });

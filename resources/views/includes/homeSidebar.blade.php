@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/mesappartements"
                         aria-expanded="false">
                         <i class="fas fa-city"></i>
                         <span class="hide-menu">Mes appartements</span>

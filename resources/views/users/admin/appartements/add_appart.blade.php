@@ -1,10 +1,10 @@
-@extends('layouts.adminApp')
+@extends('layouts.homeApp')
 
 @section('content')
 <!-- ============================================================== -->
 <!-- Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
-@include('includes.adminSidebar')
+@include('includes.homeSidebar')
 <!-- ============================================================== -->
 <!-- End Left Sidebar - style you can find in sidebar.scss  -->
 <!-- ============================================================== -->
@@ -21,7 +21,7 @@
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Modifier l'appartement</h4>
+                <h4 class="page-title">Créer un appartement</h4>
             </div>
 
         </div>
@@ -42,25 +42,27 @@
             <div class="col-sm-6">
               <div class="card shadow rounded rounded-3">
                   <div class="card-body">
-                      <form class="form-horizontal form-material">
+                      <form class="form-horizontal form-material" action="{{URL::to('/insert-appart')}}" method="post" >
+                        @csrf
                           <div class="form-group mb-4">
                               <label class="col-md-12 p-0">Type d'appartement</label>
                               <div class="col-md-12 border-bottom p-0">
-                                  <input type="text" placeholder="exemple : 3 pièces"
-                                      class="form-control p-0 border-0"> </div>
+                                  <input type="text" placeholder="exemple : 3 pièces" name="appname"
+                                    id="appname"  class="form-control p-0 border-0">
+                              </div>
                           </div>
                           <div class="form-group mb-4">
                               <label for="example-email" class="col-md-12 p-0">La somme de l'appartement</label>
                               <div class="col-md-12 border-bottom p-0">
-                                  <input type="number" placeholder="100000"
-                                      class="form-control p-0 border-0" name="sommes"
-                                      id="sommes">
+                                  <input type="text" placeholder="100000"
+                                      class="form-control p-0 border-0" name="appprice"
+                                      id="appprice">
                               </div>
                           </div>
 
                           <div class="form-group mb-4">
                               <div class="col-sm-12">
-                                  <button type="submit" class="btn btn-success text-uppercase px-md-5">Modifier</button>
+                                  <button type="submit" class="btn btn-success text-uppercase px-md-5">Créer l'appartement</button>
                               </div>
                           </div>
                       </form>
