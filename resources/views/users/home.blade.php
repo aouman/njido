@@ -58,7 +58,7 @@
                         </div>
                     </div>
                   </a>
-                  <a class="col-lg-4 col-md-12" href="#">
+                  <a class="col-lg-4 col-md-12" href="/payeShow">
                     <div class="shadow text-center font-bold text-uppercase" >
                         <div class="white-box analytics-info">
                           <h1><i class="fas fa-coins"></i></h1>

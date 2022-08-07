@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="fontawesome.html"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="payeShow"
                         aria-expanded="false">
                         <i class="fas fa-coins"></i>
                         <span class="hide-menu">Les payements</span>

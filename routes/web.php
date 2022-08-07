@@ -41,4 +41,9 @@ route::middleware('auth','isAdmin')->group(function(){
   Route::post('update-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'UpdateAppart'])->name('updateappart');
   Route::get('/delete-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'DeleteAppart'])->name('deleteappart');
 
+
+
+
+  //payement routes
+  Route::get('/payeShow', [App\Http\Controllers\payements\PayementsController::class, 'AllPay'])->name('allpay');
 });

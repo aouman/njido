@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="white-box">
-                    <h3 class="box-title">Mes locataires</h3>
+                    <h3 class="box-title">Mes Payements</h3>
                     <div class="table-responsive">
                         <table class="table text-nowrap">
                             <thead>
@@ -61,17 +61,18 @@
                                     <th class="border-top-0">Type d'appartement</th>
                                     <th class="border-top-0">La somme</th>
                                     <th class="border-top-0">Date de payement</th>
-                                    <th class="border-top-0">Status</th>
+                                    <th class="border-top-0">Statut</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach($all as $key=>$row)
                                 <tr>
-                                    <td>1</td>
+                                    <td>{{ $key+1 }}</td>
                                     <td>Arsene Kouassi</td>
                                     <td>+225 05040402036</td>
                                     <td>Studio</td>
-                                    <td>70000 Fcfa</td>
-                                    <td>25/03/2022</td>
+                                    <td>{{ $row->montant }} Fcfa</td>
+                                    <td>{{ $row->date_pay }}</td>
                                     <td>
                                       <a href="#" class="font-18 bg-info text-white p-2 rounded-3 shadow-sm m-r-30">
                                         Loyer Payer
@@ -82,6 +83,7 @@
                                     </td>
 
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
