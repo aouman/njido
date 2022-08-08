@@ -15,7 +15,6 @@ class CreatePayementsTable extends Migration
     {
         Schema::create('payements', function (Blueprint $table) {
             $table->id();
-            $table->float('montant',15,2);
             $table->date('date_pay');
             $table->integer('statut');
             $table->foreignId('appart_id');

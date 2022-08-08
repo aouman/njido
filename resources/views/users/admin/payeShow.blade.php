@@ -68,20 +68,19 @@
                                 @foreach($all as $key=>$row)
                                 <tr>
                                     <td>{{ $key+1 }}</td>
-                                    <td>Arsene Kouassi</td>
-                                    <td>+225 05040402036</td>
-                                    <td>Studio</td>
-                                    <td>{{ $row->montant }} Fcfa</td>
+                                    <td>{{ $row->name }}</td>
+                                    <td>{{ $row->phone }}</td>
+                                    <td>{{ $row->AppName }}</td>
+                                    <td>{{ $row->AppPrice }} Fcfa</td>
                                     <td>{{ $row->date_pay }}</td>
-                                    <td>
-                                      <a href="#" class="font-18 bg-info text-white p-2 rounded-3 shadow-sm m-r-30">
-                                        Loyer Payer
-                                      </a>
-                                      <a href="#" class="font-18 bg-danger d-none text-white p-2 rounded-3 shadow-sm">
-                                        Loyer inPayer
-                                      </a>
-                                    </td>
 
+                                    @if (($row->statut) === 0)
+                                    <td>Loyer inPayé</td>
+
+                                    @else (($row->statut) === 0)
+                                    <td>Loyer Payé</td>
+                                    @endif
+                                 
                                 </tr>
                                 @endforeach
                             </tbody>

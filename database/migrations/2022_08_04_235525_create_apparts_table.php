@@ -17,6 +17,8 @@ class CreateAppartsTable extends Migration
             $table->id();
             $table->string('AppName');
             $table->string('AppPrice');
+            $table->foreignId('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
