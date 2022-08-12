@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="payeShow"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/payeShow"
                         aria-expanded="false">
                         <i class="fas fa-coins"></i>
                         <span class="hide-menu">Les payements</span>
@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/userPaye"
                         aria-expanded="false">
                         <i class="fas fa-coins"></i>
                         <span class="hide-menu">Mes paiements</span>

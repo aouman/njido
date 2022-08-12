@@ -41,7 +41,7 @@
                 <!-- ============================================================== -->
                 @if(auth()->user()->role=='Admin')
                 <div class="row justify-content-center">
-                  <a class="col-lg-4 col-md-12" href="#">
+                  <a class="col-lg-4 col-md-12" href="/mesappartements">
                     <div class="shadow text-center font-bold text-uppercase" >
                         <div class="white-box analytics-info">
                             <h1><i class="fas fa-city"></i></h1>
@@ -111,19 +111,25 @@
                                                 <td>{{auth()->user()->email}}</td>
 
                                             </tr>
+                                            
                                             <tr>
                                                 <td class="text-uppercase font-bold">N° de téléphone :</td>
                                                 <td>{{auth()->user()->phone}}</td>
 
                                             </tr>
+                                            {{-- @foreach($all as $key=>$row)
                                             <tr>
-                                                <td class="text-uppercase font-bold">Type de loyer :</td>
-                                                <td>2 pièces</td>
-
+                                                <td class="text-uppercase font-bold">Type d'appartement :</td>
+                                                <td>{{ $row->AppName }}</td>
+                                            </tr>
+                                            @endforeach --}}
+                                            <tr>
+                                                <td class="text-uppercase font-bold">Type d'appartement :</td>
+                                                <td>{{auth()->user()->AppName }}Studio</td>
                                             </tr>
                                             <tr>
                                                 <td class="text-uppercase font-bold">Montant du loyer :</td>
-                                                <td>150000 Fcfa</td>
+                                                <td>{{auth()->user()->AppPrice}}80 000 Fcfa</td>
                                             </tr>
 
                                         </tbody>

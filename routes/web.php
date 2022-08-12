@@ -24,6 +24,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//locataire route
+Route::get('/home/{id}', [App\Http\Controllers\users\UserController::class, 'ShowUser'])->name('showuser');
+
+
 //user management
 route::middleware('auth','isAdmin')->group(function(){
   Route::get('/meslocataires', [App\Http\Controllers\users\UserController::class, 'AllUser'])->name('alluser');
@@ -32,10 +36,11 @@ route::middleware('auth','isAdmin')->group(function(){
   Route::get('/modifier-locataire/{id}', [App\Http\Controllers\users\UserController::class, 'EditUser'])->name('edituser');
   Route::post('update-user/{id}', [App\Http\Controllers\users\UserController::class, 'UpdateUser'])->name('updateuser');
   Route::get('/delete-user/{id}', [App\Http\Controllers\users\UserController::class, 'DeleteUser'])->name('deleteuser');
+  
 
 //appartements management
   Route::get('/mesappartements', [App\Http\Controllers\appartement\AppartController::class, 'AllAppart'])->name('allappart');
-  Route::get('/ajouter-locataire', [App\Http\Controllers\appartement\AppartController::class, 'AddAppart'])->name('addappart');
+  Route::get('/ajouter-appart', [App\Http\Controllers\appartement\AppartController::class, 'AddAppart'])->name('addappart');
   Route::post('insert-appart', [App\Http\Controllers\appartement\AppartController::class, 'InsertAppart'])->name('insertappart');
   Route::get('/modifier-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'EditAppart'])->name('editappart');
   Route::post('update-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'UpdateAppart'])->name('updateappart');
@@ -46,4 +51,5 @@ route::middleware('auth','isAdmin')->group(function(){
 
   //payement routes
   Route::get('/payeShow', [App\Http\Controllers\payements\PayementsController::class, 'AllPay'])->name('allpay');
+  Route::get('/userPaye', [App\Http\Controllers\payements\PayementsController::class, 'AllPayUser'])->name('allpayUser');
 });
