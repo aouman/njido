@@ -5,6 +5,7 @@ namespace App\Http\Controllers\appartement;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\appart;
+use App\Http\Controllers\users;
 use DB;
 
 class AppartController extends Controller
@@ -26,6 +27,7 @@ class AppartController extends Controller
       $data = array();
       $data['AppName']= $request->appname;
       $data['AppPrice'] = $request->appprice;
+      $data['user_id'] = $request->user_id;
       $data['created_at'] = date('Y-m-d H:i:s');
       $data['updated_at'] = date('Y-m-d H:i:s');
 
@@ -61,6 +63,7 @@ class AppartController extends Controller
       $data = array();
       $data['AppName']= $request->appname;
       $data['AppPrice'] = $request->appprice;
+      $data['user_id'] = $request->user_id;
       $data['created_at'] = date('Y-m-d H:i:s');
       $data['updated_at'] = date('Y-m-d H:i:s');
 

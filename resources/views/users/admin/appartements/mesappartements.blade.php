@@ -28,7 +28,7 @@
                     <ol class="breadcrumb ms-auto">
                         <li></li>
                     </ol>
-                    <a href="/ajouter-locataire"
+                    <a href="/ajouter-appart"
                         class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Ajouter un appartement</a>
                 </div>
             </div>

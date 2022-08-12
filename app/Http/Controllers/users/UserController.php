@@ -16,7 +16,10 @@ class UserController extends Controller
 
   public function AllUser()
   {
-    $all = DB::table('users')->get();
+    $all = DB::table('users')
+              -> join ('apparts', 'users.id', '=', 'apparts.user_id')
+              ->select ('apparts.*','users.*')
+              ->get();
     return view('users\admin\locataires\meslocataires',compact('all'));
   }
 //addUser, InsertUser
@@ -115,6 +118,33 @@ class UserController extends Controller
       );
       return redirect()->route('alluser')->with($notification);
     }
+  }
+
+  public function ShowUser($id)
+  {
+    $all = DB::table('users')
+              ->join('apparts','users.id', '=', 'apparts.user_id')
+              ->select('apparts.*')
+              ->where('id',$id)->get();
+
+  //   if ($all)
+  //   {
+  //     $notification=array(
+  //       'message'=>'Locataire retrouvé avec succes',
+  //       'alert-type'=>'succes'
+  //     );
+  //     return view('users\home', compact('all'))->with($notification);
+  //   }
+  //   else
+  //   {
+  //     $notification=array(
+  //       'message'=>'Un problème est survenu',
+  //       'alert-type'=>'error'
+  //     );
+  //     return view('users\home', compact('all'))->with($notification);
+  //  // return view('users\home',compact('show'));
+  //   }
+  return view('users\home', compact('all'));//->with($notification);
   }
 
 }

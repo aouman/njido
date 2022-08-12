@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppartsTable extends Migration
+class CreatePayementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateAppartsTable extends Migration
      */
     public function up()
     {
-        Schema::create('apparts', function (Blueprint $table) {
+        Schema::create('payements', function (Blueprint $table) {
             $table->id();
-            $table->string('AppName');
-            $table->string('AppPrice');
-            $table->foreignId('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->date('date_pay');
+            $table->integer('statut');
+            $table->foreignId('appart_id');
+            $table->foreign('appart_id')->references('id')->on('apparts')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateAppartsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('apparts');
+        Schema::dropIfExists('payements');
     }
 }
