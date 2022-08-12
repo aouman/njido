@@ -21,7 +21,7 @@
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Mes locataire</h4>
+                <h4 class="page-title">Mes locataires</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
@@ -73,7 +73,7 @@
                                     <td>{{$row->email}}</td>
                                     <td>{{$row->role}}</td>
                                     <td>{{$row->phone}}</td>
-                                    <td>{{$row->role}}</td>
+                                    <td>{{$row->AppName}}</td>
                                     <td>{{$row->date_location}}</td>
                                     <td>
                                       <a href="{{URL::to('/modifier-locataire/'.$row->id)}}" class="font-18 bg-info text-white p-2 rounded-3 shadow-sm m-r-30">

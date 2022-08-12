@@ -24,6 +24,10 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//locataire route
+Route::get('/home/{id}', [App\Http\Controllers\users\UserController::class, 'ShowUser'])->name('showuser');
+
+
 //user management
 route::middleware('auth','isAdmin')->group(function(){
   Route::get('/meslocataires', [App\Http\Controllers\users\UserController::class, 'AllUser'])->name('alluser');
@@ -32,6 +36,7 @@ route::middleware('auth','isAdmin')->group(function(){
   Route::get('/modifier-locataire/{id}', [App\Http\Controllers\users\UserController::class, 'EditUser'])->name('edituser');
   Route::post('update-user/{id}', [App\Http\Controllers\users\UserController::class, 'UpdateUser'])->name('updateuser');
   Route::get('/delete-user/{id}', [App\Http\Controllers\users\UserController::class, 'DeleteUser'])->name('deleteuser');
+  
 
 //appartements management
   Route::get('/mesappartements', [App\Http\Controllers\appartement\AppartController::class, 'AllAppart'])->name('allappart');
@@ -41,4 +46,10 @@ route::middleware('auth','isAdmin')->group(function(){
   Route::post('update-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'UpdateAppart'])->name('updateappart');
   Route::get('/delete-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'DeleteAppart'])->name('deleteappart');
 
+
+
+
+  //payement routes
+  Route::get('/payeShow', [App\Http\Controllers\payements\PayementsController::class, 'AllPay'])->name('allpay');
+  Route::get('/userPaye', [App\Http\Controllers\payements\PayementsController::class, 'AllPayUser'])->name('allpayUser');
 });
