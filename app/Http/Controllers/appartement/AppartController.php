@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\appart;
 use DB;
+use \Models\User;
 
 class AppartController extends Controller
 {

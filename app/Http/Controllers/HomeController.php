@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \Models\User;
+use \Models\appart;
 
 class HomeController extends Controller
 {

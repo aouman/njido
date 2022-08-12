@@ -93,9 +93,9 @@
 
                               <div class="col-sm-12 border-bottom">
                                   <select name="appartement" class="form-select shadow-none p-0 border-0 form-control-line">
-                                      <option value="">Studio</option>
-                                      <option value="">2 pièces</option>
-                                      <option value="">3 pièces</option>
+                                    @if(auth()->user()->role=='locataire')
+                                      <option value="">43436</option>
+                                    @endif
                                   </select>
                               </div>
                           </div>

@@ -35,7 +35,7 @@ route::middleware('auth','isAdmin')->group(function(){
 
 //appartements management
   Route::get('/mesappartements', [App\Http\Controllers\appartement\AppartController::class, 'AllAppart'])->name('allappart');
-  Route::get('/ajouter-locataire', [App\Http\Controllers\appartement\AppartController::class, 'AddAppart'])->name('addappart');
+  Route::get('/ajouter-appart', [App\Http\Controllers\appartement\AppartController::class, 'AddAppart'])->name('addappart');
   Route::post('insert-appart', [App\Http\Controllers\appartement\AppartController::class, 'InsertAppart'])->name('insertappart');
   Route::get('/modifier-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'EditAppart'])->name('editappart');
   Route::post('update-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'UpdateAppart'])->name('updateappart');

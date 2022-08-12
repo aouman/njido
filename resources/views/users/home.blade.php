@@ -41,7 +41,7 @@
                 <!-- ============================================================== -->
                 @if(auth()->user()->role=='Admin')
                 <div class="row justify-content-center">
-                  <a class="col-lg-4 col-md-12" href="#">
+                  <a class="col-lg-4 col-md-12" href="/mesappartements">
                     <div class="shadow text-center font-bold text-uppercase" >
                         <div class="white-box analytics-info">
                             <h1><i class="fas fa-city"></i></h1>

@@ -17,13 +17,19 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('phone')->unique();
-            $table->date('date_location');
+            $table->string('phone')->nullable();
+            $table->date('date_location')->nullable();
             $table->string('role')->default('locataire');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+
+            //la clé pour lier l'appart à l'utilisateur
+            //$table->unsignedBigInteger('user_id');
+            //$table->foreign('user_id')->references('id')->on('userss');
+            $table->foreignId('appart_id')->constrained();
         });
     }
 
