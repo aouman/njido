@@ -125,7 +125,7 @@
                                             @endforeach --}}
                                             <tr>
                                                 <td class="text-uppercase font-bold">Type d'appartement :</td>
-                                                <td>{{auth()->user()->AppName }}Studio</td>
+                                                <td>{{auth()->user()->AppName }}</td>
                                             </tr>
                                             <tr>
                                                 <td class="text-uppercase font-bold">Montant du loyer :</td>
