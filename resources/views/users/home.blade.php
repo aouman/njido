@@ -71,8 +71,8 @@
                 <!-- Row -->
                 <div class="row">
                     <!-- Column -->
-                    <div class="col-lg-4 col-xlg-3 col-md-12">
-                        <div class="white-box">
+                    <div class="col-md-2">
+                        <!--div class="white-box">
                             <div class="user-bg"> <img width="100%" alt="user" src="{{asset('backend/plugins/images/large/img1.jpg')}}">
                                 <div class="overlay-box">
                                     <div class="user-content">
@@ -86,7 +86,7 @@
                             <div class="user-btm-box mt-5 d-md-flex">
                                 <input type="file" name="avatarUsers" value="ajouter une photo">
                             </div>
-                        </div>
+                        </div-->
                     </div>
                     <!-- Column -->
                     <!-- Column -->
@@ -111,7 +111,7 @@
                                                 <td>{{auth()->user()->email}}</td>
 
                                             </tr>
-                                            
+
                                             <tr>
                                                 <td class="text-uppercase font-bold">N° de téléphone :</td>
                                                 <td>{{auth()->user()->phone}}</td>
@@ -137,6 +137,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-md-2"></div>
 
 
                     <!-- Column -->
