@@ -73,7 +73,9 @@
                                     <td>{{$row->email}}</td>
                                     <td>{{$row->role}}</td>
                                     <td>{{$row->phone}}</td>
-                                    <td>{{$row->AppName}}</td>
+                                    @if (isset($key->apparts))
+                                      <td>{{$all->apparts->AppName}}</td>
+                                    @endif
                                     <td>{{$row->date_location}}</td>
                                     <td>
                                       <a href="{{URL::to('/modifier-locataire/'.$row->id)}}" class="font-18 bg-info text-white p-2 rounded-3 shadow-sm m-r-30">

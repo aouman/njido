@@ -5,7 +5,7 @@ namespace App\Http\Controllers\appartement;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\appart;
-use App\Http\Controllers\users;
+use App\Http\Controllers\users\UserController;
 use Auth;
 use DB;
 use \Models\User;

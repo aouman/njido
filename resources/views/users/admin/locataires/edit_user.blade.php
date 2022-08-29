@@ -92,12 +92,10 @@
                               <label class="col-sm-12">Type d'appartement</label>
 
                               <div class="col-sm-12 border-bottom">
-                                  <select name="appartement" class="form-select shadow-none p-0 border-0 form-control-line">
-                                    {{-- @foreach($all as $key=>$row)
-                                    <option value="">{{$row->AppName}}</option>
-                                    @endforeach --}}
-                                      {{-- <option value="">2 pièces</option>
-                                      <option value="">3 pièces</option> --}}
+                                  <select name="appartement"  class="form-select shadow-none p-0 border-0 form-control-line">
+                                    @foreach($all as $key=>$row)
+                                      <option value="{{$row->id}}">{{$row->AppName}}</option>
+                                    @endforeach
                                   </select>
                               </div>
                           </div>

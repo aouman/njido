@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\appartement\AppartController;
+use App\Http\Controllers\users\UserController;
 
 
 
@@ -41,7 +42,7 @@ route::middleware('auth','isAdmin')->group(function(){
   Route::get('/modifier-locataire/{id}', [App\Http\Controllers\users\UserController::class, 'EditUser'])->name('edituser');
   Route::post('update-user/{id}', [App\Http\Controllers\users\UserController::class, 'UpdateUser'])->name('updateuser');
   Route::get('/delete-user/{id}', [App\Http\Controllers\users\UserController::class, 'DeleteUser'])->name('deleteuser');
-  
+
 
 //appartements management
   Route::get('/mesappartements', [App\Http\Controllers\appartement\AppartController::class, 'AllAppart'])->name('allappart');
@@ -55,5 +56,5 @@ route::middleware('auth','isAdmin')->group(function(){
 //payement routes
 Route::get('/payeShow', [App\Http\Controllers\payements\PayementsController::class, 'AllPay'])->name('allpay');
 
- 
+
 });

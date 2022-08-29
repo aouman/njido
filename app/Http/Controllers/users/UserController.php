@@ -27,7 +27,8 @@ class UserController extends Controller
 
   public function AddUser()
   {
-    return view ('users\admin\locataires\add_user');
+    $all = DB::table('apparts')->get();
+    return view ('users\admin\locataires\add_user',compact('all'));
   }
 
   public function InsertUser(Request $request)
@@ -63,8 +64,9 @@ class UserController extends Controller
 
   public function EditUser($id)
   {
+    $all = DB::table('apparts')->get();
     $edit = DB::table('users')->where('id',$id)->first();
-    return view('users\admin\locataires\edit_user',compact('edit'));
+    return view('users\admin\locataires\edit_user',compact('edit','all'));
   }
 
   public function UpdateUser(Request $request,$id)
@@ -147,5 +149,6 @@ class UserController extends Controller
   //   }
   return view('users\home', compact('all'));//->with($notification);
   }
+
 
 }

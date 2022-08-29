@@ -62,7 +62,7 @@
                     <div class="shadow text-center font-bold text-uppercase" >
                         <div class="white-box analytics-info">
                           <h1><i class="fas fa-coins"></i></h1>
-                            <h3 class="box-title">Les payements</h3>
+                            <h3 class="box-title">Les paiements</h3>
                         </div>
                     </div>
                   </a>

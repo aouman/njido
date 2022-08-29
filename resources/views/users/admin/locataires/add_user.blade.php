@@ -92,10 +92,12 @@
                               <label class="col-sm-12">Type d'appartement</label>
 
                               <div class="col-sm-12 border-bottom">
-                                  <select name="appartement" class="form-select shadow-none p-0 border-0 form-control-line">
-                                    @if(auth()->user()->role=='locataire')
-                                      <option value="">43436</option>
-                                    @endif
+                                  <select name="appart_id" class="form-select shadow-none p-0 border-0 form-control-line">
+
+                                      @foreach($all as $key=>$row)
+                                        <option value="{{$row->id}}">{{$row->AppName}}</option>
+                                      @endforeach
+
                                   </select>
                               </div>
                           </div>

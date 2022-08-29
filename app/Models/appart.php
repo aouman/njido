@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\models\payements;
-use App\models\user;
+use App\models\User;
 
 class appart extends Model
 {
-    protected $fillable = ['AppName','AppPrice'];
+    protected $fillable = ['AppName','AppPrice','user_id'];
 
     public function payements()
     {
