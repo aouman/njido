@@ -6,10 +6,18 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\appart;
 use App\Http\Controllers\users;
+use Auth;
 use DB;
 
 class AppartController extends Controller
 {
+  public function __construct()
+  {
+      $this->middleware('auth');
+  }
+
+
+
     public function AllAppart()
     {
       $all = DB::table('apparts')->get();
@@ -27,7 +35,7 @@ class AppartController extends Controller
       $data = array();
       $data['AppName']= $request->appname;
       $data['AppPrice'] = $request->appprice;
-      $data['user_id'] = $request->user_id;
+      $data['user_id'] = Auth::user()->id;
       $data['created_at'] = date('Y-m-d H:i:s');
       $data['updated_at'] = date('Y-m-d H:i:s');
 
@@ -63,7 +71,7 @@ class AppartController extends Controller
       $data = array();
       $data['AppName']= $request->appname;
       $data['AppPrice'] = $request->appprice;
-      $data['user_id'] = $request->user_id;
+      $data['user_id'] = Auth::user()->id;;
       $data['created_at'] = date('Y-m-d H:i:s');
       $data['updated_at'] = date('Y-m-d H:i:s');
 
