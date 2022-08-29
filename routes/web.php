@@ -24,9 +24,14 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+route::middleware('auth','isUsers')->group(function(){
 //locataire route
 Route::get('/home/{id}', [App\Http\Controllers\users\UserController::class, 'ShowUser'])->name('showuser');
 
+ //payement routes
+ ///Route::get('/payeShow', [App\Http\Controllers\payements\PayementsController::class, 'AllPay'])->name('allpay');
+ Route::get('/userPaye', [App\Http\Controllers\payements\PayementsController::class, 'AllPayUser'])->name('allpayUser');
+});
 
 //user management
 route::middleware('auth','isAdmin')->group(function(){
@@ -47,9 +52,8 @@ route::middleware('auth','isAdmin')->group(function(){
   Route::get('/delete-appart/{id}', [App\Http\Controllers\appartement\AppartController::class, 'DeleteAppart'])->name('deleteappart');
 
 
+//payement routes
+Route::get('/payeShow', [App\Http\Controllers\payements\PayementsController::class, 'AllPay'])->name('allpay');
 
-
-  //payement routes
-  Route::get('/payeShow', [App\Http\Controllers\payements\PayementsController::class, 'AllPay'])->name('allpay');
-  Route::get('/userPaye', [App\Http\Controllers\payements\PayementsController::class, 'AllPayUser'])->name('allpayUser');
+ 
 });
